@@ -1,5 +1,5 @@
 # APGD-PyTorch-Implementation
-This repository contains a PyTorch implementation of the Adversarial Projected Gradient Descent (APGD) attack.  It includes script along with a separate file for data management and model.
+This repository contains a PyTorch implementation of the Adversarial Projected Gradient Descent (APGD) attack.  It includes attack script along with a separate file for data management and model.
 # APGD (PyTorch) – CIFAR-10 Example
 (1,000 correctly-classified samples)
 
