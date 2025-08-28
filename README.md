@@ -1,30 +1,9 @@
 # APGD-PyTorch-Implementation
 This repository contains a PyTorch implementation of the Adversarial Projected Gradient Descent (APGD) attack.  It includes script along with a separate file for data management and model.
 
-# APGD (PyTorch) – CIFAR-10 Example
-(1,000 correctly-classified samples)
-
-This repo provides an APGD implementation and a minimal example to evaluate robustness on CIFAR-10 using a ResNet-56 checkpoint.
-
-## Requirements
-
--   Python 3.8+
--   `torch`
--   `torchvision`
-
-## Local helper modules
-
--   `DataManagerPytorch.py`
--   `ResNet.py` (with `resnet56(...)`)
--   `AttackWrappersAPGD.py` (this repo)
-
-### Install (only if needed):
-```bash
-pip install torch torchvision
-
 ### Quickstart (evaluate APGD on 1,000 balanced clean samples):
 
-
+```python
 import torch
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
@@ -94,4 +73,3 @@ torch.save(x_adv_new, 'x_adv_bs32.pth')
 # --- Robust accuracy ---
 robust_acc_new = DMP.validateD(advLoader_new, model, device)
 print(f"APGD (bs=32) robust acc: {robust_acc_new*100:.2f}%")
-
