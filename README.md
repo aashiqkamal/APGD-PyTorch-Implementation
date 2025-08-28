@@ -24,7 +24,7 @@ If needed, you can install the required Python packages with `pip`:
 ```bash
 pip install torch torchvision
 
-Quickstart (evaluate APGD on 1,000 balanced clean samples):
+### Quickstart (evaluate APGD on 1,000 balanced clean samples):
 import torch
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
