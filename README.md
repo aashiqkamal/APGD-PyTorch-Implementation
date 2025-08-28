@@ -24,7 +24,7 @@ pip install torch torchvision
 
 ### Quickstart (evaluate APGD on 1,000 balanced clean samples):
 
-```python
+
 import torch
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
