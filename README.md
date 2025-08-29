@@ -93,8 +93,8 @@ torch.save(x_adv_new, 'x_adv_bs32.pth')
 # Robust accuracy 
 robust_acc_new = DMP.validateD(advLoader_new, model, device)
 print(f"APGD (bs=32) robust acc: {robust_acc_new*100:.2f}%")
-## Expected Output
 
+## Expected Output
 When you run the given script, you should see output similar to the following:
 Device: cuda
 ResNet56 loaded.
