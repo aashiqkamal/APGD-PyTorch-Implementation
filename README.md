@@ -57,7 +57,8 @@ state_dict = ckpt.get("state_dict", ckpt)
 state_dict = {k.replace("module.",""): v for k,v in state_dict.items()}
 model.load_state_dict(state_dict, strict=True)
 model.eval()
-
+#clean accuracy
+clean_acc = DMP.validateD(valLoader, model, device)
 # Collect 1,000 correctly-classified samples balanced by class
 cleanLoader1000 = DMP.GetCorrectlyIdentifiedSamplesBalanced(
     model,
