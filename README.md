@@ -8,8 +8,8 @@ This repo provides an APGD implementation and a minimal example to evaluate robu
 ## Requirements
 
 -   Python 3.8+
--   `torch`
--   `torchvision`
+-   `torch` (version 2.7.1)
+-   `torchvision` (version 0.22.1)
 
 ### Local helper modules
 
@@ -95,3 +95,12 @@ torch.save(x_adv_new, 'x_adv_bs32.pth')
 # --- Robust accuracy ---
 robust_acc_new = DMP.validateD(advLoader_new, model, device)
 print(f"APGD (bs=32) robust acc: {robust_acc_new*100:.2f}%")
+## Expected Output
+
+When you run the `Quickstart` script, you should see output similar to the following:
+Device: cuda
+ResNet56 loaded.
+Clean CIFAR-10 accuracy: 92.77%
+1000 balanced clean samples ready.
+x_adv_new generated and saved.
+APGD attack (bs=32) robust acc: 0.00%
